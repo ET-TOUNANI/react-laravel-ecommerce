@@ -63,6 +63,12 @@ function Sidebar() {
                                 <div className="sb-nav-link-icon"><i className="fas fa-table"></i></div>
                                 Tables
                             </Link>
+                            
+                            <div className="sb-sidenav-menu-heading"></div>
+                            <div className="sb-sidenav-menu-heading"></div>
+                            <div className="sb-sidenav-menu-heading"></div>
+                            <div className="sb-sidenav-menu-heading"></div>
+                            <div className="sb-sidenav-menu-heading"></div>
                         </div>
                     </div>
                     
