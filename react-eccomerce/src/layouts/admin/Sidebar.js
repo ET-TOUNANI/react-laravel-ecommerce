@@ -7,7 +7,7 @@ function Sidebar() {
                     <div className="sb-sidenav-menu">
                         <div className="nav">
                             <div className="sb-sidenav-menu-heading">Core</div>
-                            <Link className="nav-link" to="index.html">
+                            <Link className="nav-link" to="/admin">
                                 <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </Link>
@@ -19,8 +19,8 @@ function Sidebar() {
                             </Link>
                             <div className="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav className="sb-sidenav-menu-nested nav">
-                                    <a className="nav-link" to="layout-static.html">Static Navigation</a>
-                                    <a className="nav-link" to="layout-sidenav-light.html">Light Sidenav</a>
+                                    <Link className="nav-link" to="layout-static.html">Static Navigation</Link>
+                                    <Link className="nav-link" to="layout-sidenav-light.html">Light Sidenav</Link>
                                 </nav>
                             </div>
                             <Link className="nav-link collapsed" to="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -55,20 +55,17 @@ function Sidebar() {
                                 </nav>
                             </div>
                             <div className="sb-sidenav-menu-heading">Addons</div>
-                            <Link className="nav-link" to="charts.html">
+                            <Link className="nav-link" to="#">
                                 <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
                                 Charts
                             </Link>
-                            <Link className="nav-link" to="tables.html">
+                            <Link className="nav-link" to="#">
                                 <div className="sb-nav-link-icon"><i className="fas fa-table"></i></div>
                                 Tables
                             </Link>
                         </div>
                     </div>
-                    <div className="sb-sidenav-footer">
-                        <div className="small">Logged in as:</div>
-                        Start Bootstrap
-                    </div>
+                    
                 </nav>
     </div>
   )

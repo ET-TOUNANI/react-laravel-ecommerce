@@ -14,7 +14,7 @@ function MasterLayout() {
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    Hello
+                    Hello from master 
                 </main>
                 <Footer />
             </div>
