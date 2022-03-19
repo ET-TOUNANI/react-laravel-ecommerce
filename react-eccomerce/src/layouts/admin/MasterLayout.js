@@ -6,7 +6,6 @@ import '../../assets/admin/css/styles.css'
 import '../../assets/admin/js/scripts'
 function MasterLayout() {
   return (
-
     <div className='sb-nav-fixed'>
         <Navbar />
         <div id="layoutSidenav">
