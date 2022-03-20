@@ -3,6 +3,8 @@ import { BrowserRouter,Route ,Routes } from  'react-router-dom'
 import  MasterLayout  from "./layouts/admin/MasterLayout";
 import NotFound from './NotFound'
 import Home from './Home'
+import Dashboard from "./components/admin/Dashboard";
+import Profile from "./components/admin/Profile";
 function App() {
   return (
     <div className="App">
@@ -17,7 +19,10 @@ function App() {
               <Route path="/users/reset-password/:key" component={ResetPassword} />
               <Route path="/users/profile/:username" component={UserProfile} />
               <Route path="/chat/messages" component={Messages} />*/}
-              <Route  path="admin" element={<MasterLayout/>} />
+              <Route  path="/admin"  name="admin" element={<MasterLayout/>} >
+                <Route path="dashboard" element={<Dashboard />} />
+                <Route path="profile" element={<Profile />} />
+              </Route>
               <Route path="*" element={<NotFound/>} />
             </Routes>
           </BrowserRouter>
