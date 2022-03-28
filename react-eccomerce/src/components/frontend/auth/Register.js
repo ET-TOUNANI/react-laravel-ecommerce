@@ -8,12 +8,20 @@ function Register() {
       email    : '',
    });
 
-   
+
    const handleInput=(e)=>{
       e.presist();
       setRegistre({...registerInput,[e.target.name]: e.target.value})
    }
-
+   const registreSubmit=(e)=>{
+      e.preventDefault(); //don't let page reload
+      const data ={
+        fullname : registerInput.fullname,
+        lastname : registerInput.lastname,
+        pass     : registerInput.pass,
+        email    : registerInput.email,
+      }
+   }
 
   return (
     <div>
@@ -26,7 +34,7 @@ function Register() {
                   <h1>Register </h1>
                 </div>
                 <div className="card-body">
-                  <form action="">
+                  <form onSubmit={registreSubmit}>
 
                    <div className="form-group mb-3">
                       <label > Full Name </label>
