@@ -1,12 +1,20 @@
 import React,{useState} from 'react'
 import Navbar from '../../../layouts/frontend/Navbar'
 function Register() {
-   const [state, setstate] = useState({
+   const [registerInput, setRegistre] = useState({
       fullname : '',
       lastname : '',
       pass     : '',
       email    : '',
    });
+
+   
+   const handleInput=(e)=>{
+      e.presist();
+      setRegistre({...registerInput,[e.target.name]: e.target.value})
+   }
+
+
   return (
     <div>
        <Navbar/>
