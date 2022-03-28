@@ -1,5 +1,7 @@
-import React,{useState} from 'react'
-import Navbar from '../../../layouts/frontend/Navbar'
+import React,{useState} from 'react';
+import Navbar from '../../../layouts/frontend/Navbar';
+import axios from 'axios'
+
 function Register() {
    const [registerInput, setRegistre] = useState({
       fullname : '',
@@ -15,12 +17,15 @@ function Register() {
    }
    const registreSubmit=(e)=>{
       e.preventDefault(); //don't let page reload
-      const data ={
+      const data = {
         fullname : registerInput.fullname,
         lastname : registerInput.lastname,
         pass     : registerInput.pass,
         email    : registerInput.email,
       }
+      axios.post(`/api/register`,data).then(res=>{
+
+      });
    }
 
   return (
