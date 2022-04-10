@@ -1,12 +1,33 @@
-import React,{useState} from 'react'
-import Navbar from '../../../layouts/frontend/Navbar'
+import React,{useState} from 'react';
+import Navbar from '../../../layouts/frontend/Navbar';
+import axios from 'axios'
+
 function Register() {
-   const [state, setstate] = useState({
+   const [registerInput, setRegistre] = useState({
       fullname : '',
       lastname : '',
       pass     : '',
       email    : '',
    });
+
+
+   const handleInput=(e)=>{
+      e.presist();
+      setRegistre({...registerInput,[e.target.name]: e.target.value})
+   }
+   const registreSubmit=(e)=>{
+      e.preventDefault(); //don't let page reload
+      const data = {
+        fullname : registerInput.fullname,
+        lastname : registerInput.lastname,
+        pass     : registerInput.pass,
+        email    : registerInput.email,
+      }
+      axios.post(`/api/register`,data).then(res=>{
+
+      });
+   }
+
   return (
     <div>
        <Navbar/>
@@ -18,7 +39,7 @@ function Register() {
                   <h1>Register </h1>
                 </div>
                 <div className="card-body">
-                  <form action="">
+                  <form onSubmit={registreSubmit}>
 
                    <div className="form-group mb-3">
                       <label > Full Name </label>
